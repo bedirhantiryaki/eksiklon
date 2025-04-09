@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# Ekşi Sözlük Klon Projesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, popüler Türk forum sitesi olan Ekşi Sözlük'ün arayüzünün bir kopyasıdır. React, TypeScript ve Vite kullanılarak geliştirilmiştir.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern UI/UX tasarımı ile Ekşi Sözlük benzeri kullanıcı arayüzü
+- Duyarlı (responsive) tasarım ile her cihazda uyumlu görünüm
+- Ana sayfa, profil sayfası, mesajlar, gündem ve diğer bölümler
+- Entry okuma, yazma ve etkileşim özellikleri
+- React ve TypeScript ile geliştirilmiş modern kod yapısı
 
-## Expanding the ESLint configuration
+## Kurulum
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# Projeyi klonlayın
+git clone https://github.com/kullanici-adi/eksisozluk-klon.git
+
+# Proje klasörüne gidin
+cd eksisozluk-klon
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Kullanılan Teknolojiler
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 18
+- TypeScript
+- Vite
+- React Router
+- date-fns (tarih formatlaması için)
+- CSS (özel stil dosyaları)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Proje Yapısı
+
 ```
+eksisozluk-klon/
+├── public/         # Statik dosyalar
+├── src/            # Kaynak kodları
+│   ├── components/ # React bileşenleri
+│   ├── styles/     # CSS dosyaları
+│   ├── App.tsx     # Ana uygulama bileşeni
+│   └── main.tsx    # Giriş noktası
+├── index.html      # HTML şablonu
+└── package.json    # Proje bağımlılıkları ve betikleri
+```
+
+## Katkıda Bulunma
+
+1. Bu projeyi fork edin
+2. Yeni bir özellik dalı oluşturun (`git checkout -b ozellik/yeni-ozellik`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik: Açıklama'`)
+4. Dalınızı ana projeye gönderin (`git push origin ozellik/yeni-ozellik`)
+5. Bir Pull Request oluşturun
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakınız.
+
+---
+
+_Not: Bu proje sadece eğitim amaçlıdır ve gerçek Ekşi Sözlük ile hiçbir ilişkisi yoktur._
